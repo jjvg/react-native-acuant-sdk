@@ -24,7 +24,6 @@ fun initializerAcuant(context: ReactApplicationContext,callback:IAcuantPackageCa
     }
   }
   Credential.initFromXml("acuant.config.xml", context)
-  print(Credential.get())
   try{
     AcuantTokenService(Credential.get(), object : AcuantTokenServiceListener {
       override fun onSuccess(token: String) {
